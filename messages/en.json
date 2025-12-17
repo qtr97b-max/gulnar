@@ -1,0 +1,20 @@
+{
+  "appName": "Gulnar",
+  "tagline": "Warm. Elegant. Home-made & restaurant food across Bahrain.",
+  "browse": "Browse",
+  "seller": "Seller",
+  "support": "Support",
+  "login": "Login",
+  "logout": "Logout",
+  "pickup": "Pickup",
+  "delivery": "Delivery",
+  "addToCart": "Add to cart",
+  "checkout": "Checkout",
+  "placeOrder": "Place order",
+  "rateOrder": "Rate your order",
+  "stars": "Stars",
+  "submit": "Submit",
+  "wallet": "Wallet",
+  "cod": "Cash on delivery",
+  "online": "Online payment"
+}
