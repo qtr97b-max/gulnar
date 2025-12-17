@@ -1,18 +1,23 @@
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
+import { ReactNode } from "react";
 import Header from "@/components/Header";
 import { isLocale } from "@/lib/i18n";
+import { setRequestLocale } from "next-intl/server";
 
 export default async function LocaleLayout({
   children,
   params,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }) {
   const { locale } = params;
 
   if (!isLocale(locale)) notFound();
+
+  // ✅ هذا السطر كان ناقص
+  setRequestLocale(locale);
 
   const messages = (await import(`@/messages/${locale}.json`)).default;
 
