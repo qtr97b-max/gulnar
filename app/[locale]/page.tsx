@@ -1,7 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-// Demo data – replace with Supabase fetch
 const vendors = [
   { id: "home-1", nameAr: "أم علي - طبخ بيت", nameEn: "Um Ali – Home Kitchen", area: "Muharraq", rating: 4.8 },
   { id: "rest-1", nameAr: "مطعم جلنار", nameEn: "Gulnar Restaurant", area: "Manama", rating: 4.6 }
@@ -37,33 +38,6 @@ export default function Page({ params }: { params: { locale: string } }) {
           ))}
         </div>
       </section>
-
-      <section className="grid gap-4 sm:grid-cols-3">
-        <Card title={locale === "ar" ? "الاستلام" : "Pickup"}>
-          {locale === "ar"
-            ? "تطلب وتستلم بنفسك من البائع مع وقت جاهزية تقريبي."
-            : "Order and pick up yourself with an estimated ready time."}
-        </Card>
-        <Card title={locale === "ar" ? "التوصيل" : "Delivery"}>
-          {locale === "ar"
-            ? "البائع أو المحل يوصل مع ETA تقديري."
-            : "Seller delivers with an estimated ETA."}
-        </Card>
-        <Card title={locale === "ar" ? "ذكاء الدعم" : "Support AI"}>
-          {locale === "ar"
-            ? "مساعد يحل المشاكل أو يفتح بلاغ تلقائيًا."
-            : "Assistant that helps solve issues or opens a ticket automatically."}
-        </Card>
-      </section>
-    </div>
-  );
-}
-
-function Card({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <div className="rounded-3xl border bg-white p-5 shadow-sm">
-      <div className="font-semibold text-maroon-900">{title}</div>
-      <div className="mt-2 text-sm text-maroon-800/80">{children}</div>
     </div>
   );
 }
